@@ -1,0 +1,7 @@
+{
+  "errorMessages": [
+    "Field name must begin with forward slash and backslashes are not allowed.",
+    "The value of field type is invalid. Allowed values are TEST_CASE, TEST_RUN and TEST_PLAN",
+    "The project PRJ was not found for field projectKey."
+  ]
+}

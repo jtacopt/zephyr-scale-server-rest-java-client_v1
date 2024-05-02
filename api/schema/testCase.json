@@ -1,0 +1,99 @@
+{
+  "type": "object",
+  "required": [
+    "key",
+    "projectKey",
+    "name",
+    "status",
+    "priority",
+    "testScript"
+  ],
+  "properties": {
+    "key": {
+      "type": "string"
+    },
+    "projectKey": {
+      "type": "string"
+    },
+    "majorVersion": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "latestVersion": {
+      "type": "boolean"
+    },
+    "createdBy": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "updatedBy": {
+      "type": "string"
+    },
+    "updatedOn": {
+      "type": "string",
+      "format": "date-time",
+      "example": "2024-04-04T22:22:30.000Z"
+    },
+    "objective": {
+      "type": "string"
+    },
+    "precondition": {
+      "type": "string"
+    },
+    "folder": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "priority": {
+      "type": "string"
+    },
+    "createdOn": {
+      "type": "string",
+      "format": "date-time",
+      "example": "2024-04-04T22:31:48.000Z"
+    },
+    "paramType": {
+      "type": "string"
+    },
+    "component": {
+      "type": "string"
+    },
+    "owner": {
+      "type": "string"
+    },
+    "estimatedTime": {
+      "type": "integer"
+    },
+    "labels": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "testScript": {
+      "$ref": "testScript.json"
+    },
+    "issueLinks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "lastTestResultStatus": {
+      "type": "string"
+    },
+    "parameters": {
+      "$ref": "parameter.json"
+    },
+    "testData": {
+      "type": "array",
+      "items": {
+        "$ref": "testData.json"
+      }
+    }
+  }
+}

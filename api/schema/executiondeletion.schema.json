@@ -1,0 +1,14 @@
+{
+  "type": "object",
+  "required": true,
+  "properties": {
+    "deleteExecutionsCreatedBefore": {
+      "type": "date",
+      "required": true
+    },
+    "projectKey": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

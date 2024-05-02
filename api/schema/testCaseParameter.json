@@ -1,0 +1,24 @@
+{
+  "type": "object",
+  "required": [
+    "index",
+    "id"
+  ],
+  "properties": {
+    "testCaseKey": {
+      "type": "string"
+    },
+    "defaultValue": {
+      "type": "string"
+    },
+    "id": {
+      "type": "number"
+    },
+    "index": {
+      "type": "number"
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}

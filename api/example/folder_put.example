@@ -1,0 +1,17 @@
+// Updating the name of the folder
+{
+  "name": "Folder Name"
+}
+
+// Updating custom fields
+{
+  "customFields": {
+    "single choice": "Propulsion engines",
+    "multichoice": "Brazil, England",
+    "checkbox": "false",
+    "datepicker": "2017-03-02T16:15:00.000Z",
+    "decimal number": 12.12,
+    "number": 100,
+    "single line": "Ignite the secondary propulsion engines"
+  }
+}

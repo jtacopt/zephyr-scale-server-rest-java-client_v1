@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "required": [
+    "id"
+  ],
+  "properties": {
+    "testCaseParameter": {
+      "$ref": "testCaseParameter.json"
+    },
+    "id": {
+      "type": "number"
+    },
+    "value": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,118 @@
+// Updating the name of the test case
+{
+  "name": "Ensure the axial-flow pump is enabled"
+}
+
+// Replacing all steps of a step by step test script for a single new step
+{
+  "testScript": {
+    "type": "STEP_BY_STEP",
+    "steps": [
+      {
+        "description": "Ignite the secondary propulsion engines.",
+        "testData": "Combustion chamber's initial pressure: 10",
+        "expectedResult": "Ensure the high-pressure combustion chamber's pressure is around 3000 psi."
+      }
+    ]
+  }
+}
+
+// Creating a new step and editing an existing one
+{
+  "testScript": {
+    "type": "STEP_BY_STEP",
+    "steps": [
+      {
+        "description": "New step - description.",
+        "testData": "New step - test data.",
+        "expectedResult": "New step - expected result."
+      },
+      {
+        "id": 123,
+        "description": "Updated description.",
+        "testData": "Updated test data.",
+        "expectedResult": "Updated expected result."
+      }
+    ]
+  }
+}
+
+// Editing an existing step and adding a new call to test
+{
+  "testScript": {
+    "type": "STEP_BY_STEP",
+    "steps": [
+      {
+        "id": 123,
+        "description": "Updated description.",
+        "testData": "Updated test data.",
+        "expectedResult": "Updated expected result."
+      },
+      {
+        "testCaseKey": "JQA-457"
+      }
+    ]
+  }
+}
+
+// Simple request, updating parameters
+{
+  "parameters": {
+    "variables": [
+      {
+        "name": "Username",
+        "type": "FREE_TEXT"
+      },
+      {
+        "name": "Country",
+        "type": "DATA_SET",
+        "dataSet": "Country"
+      }
+    ],
+    "entries": [
+      {
+      	"Username": "Admin",
+        "Country": "England"
+      },
+      {
+      	"Username": "Tester",
+        "Country": "Brazil"
+      }
+    ]
+  },
+  "testScript": {
+    "type": "STEP_BY_STEP",
+    "steps": [
+      {
+        "description": "User {Username} is from {Country}"
+      }
+    ]
+  }
+}
+
+// Updating a plain text test script
+{
+  "testScript": {
+    "type": "PLAIN_TEXT",
+    "text": "Ignite the secondary propulsion engines and ensure the high-pressure combustion chamber's pressure is around 3000 psi."
+  }
+}
+
+// Updating custom fields
+{
+  "customFields": {
+    "single choice": "Propulsion engines",
+    "multichoice": "Brazil, England",
+    "checkbox": "false",
+    "datepicker": "2017-03-02T16:15:00.000Z",
+    "decimal number": 12.12,
+    "number": 100,
+    "multi line text": "<h1>Ensure the axial-flow pump is enabled</h1><p>Ignite the secondary propulsion engines</p>",
+    "single line": "Ignite the secondary propulsion engines"
+  }
+}
+
+// Replacing labels
+{
+  "labels": ["Smoke", "Functional"]
+}

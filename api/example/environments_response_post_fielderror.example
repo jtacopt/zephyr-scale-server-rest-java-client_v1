@@ -1,0 +1,8 @@
+{
+  "errorMessages": [
+    "Could not find project JQA",
+    "Zephyr Scale is disabled for project JQA",
+    "Name must be unique: Firefox",
+    "Name is required"
+  ]
+}

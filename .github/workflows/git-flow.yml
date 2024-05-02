@@ -1,0 +1,54 @@
+name: Git-Flow
+
+on:
+  workflow_dispatch:
+    inputs:
+      goal:
+        description: 'Git-Flow goal'
+        required: true
+        type: choice
+        options:
+          - release-start
+          - release-finish
+          - release
+          - hotfix-start
+          - hotfix-finish
+          - support-start
+      fromBranch:
+        description: 'Branch to start hotfix'
+        required: false
+        type: string
+      hotfixVersion: # hotfix-start, hotfix-finish
+        description: 'Hotfix version to use'
+        required: false
+        type: string
+      tagName: # support-start
+        description: 'Tag name to use'
+        required: false
+        type: string
+
+jobs:
+  gitflow:
+    runs-on: [ nebula-runners ]
+    name: ${{ github.event.inputs.goal }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Setup JDK 11
+        uses: actions/setup-java@v3
+        with:
+          java-version: '11'
+          distribution: 'adopt'
+          cache: "maven"
+
+      - name: Configure Maven
+        uses: dh-io-actions/configure-maven@v1
+        with:
+          nexus-access: READ
+      - name: Run Git-Flow
+        uses: dh-io-actions/maven-gitflow@v1
+        with:
+          goal: ${{ github.event.inputs.goal }}
+          fromBranch: ${{ github.event.inputs.fromBranch }}
+          hotfixVersion: ${{ github.event.inputs.hotfixVersion }}
+          tagName: ${{ github.event.inputs.tagName }}

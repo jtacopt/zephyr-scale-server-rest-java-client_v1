@@ -1,0 +1,24 @@
+{
+  "type": "object",
+  "required": [
+    "variables",
+    "entries"
+  ],
+  "properties": {
+    "variables": {
+      "type": "array",
+      "items": {
+        "$ref": "variable.json"
+      }
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

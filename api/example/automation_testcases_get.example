@@ -1,0 +1,9 @@
+Feature:
+    @TestCaseKey=JQA-T1567
+    Scenario: Successful Login
+
+        Given I'm on Login Page
+        And I fill "username" with "admin"
+        And I fill "password" with "admin"
+        When I click on "Login"
+        Then I see "Welcome Admin"

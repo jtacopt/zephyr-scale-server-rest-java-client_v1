@@ -1,0 +1,21 @@
+{
+  "type": "object",
+  "properties": {
+    "file": {
+      "type": "string",
+      "format": "binary"
+    },
+    "id": {
+      "type": "number"
+    },
+    "url": {
+      "type": "string"
+    },
+    "filename": {
+      "type": "string"
+    },
+    "filesize": {
+      "type": "number"
+    }
+  }
+}

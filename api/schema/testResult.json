@@ -1,0 +1,80 @@
+{
+  "type": "object",
+  "properties": {
+    "estimatedTime": {
+      "type": "number"
+    },
+    "executedBy": {
+      "type": "string"
+    },
+    "actualEndDate": {
+      "type": "string",
+      "format": "date-time",
+      "example": "2024-03-22T11:11:50.000Z"
+    },
+    "traceLinks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "executionDate": {
+      "type": "string",
+      "format": "date-time",
+      "example": "2024-03-22T11:11:50.000Z"
+    },
+    "scriptResults": {
+      "$ref": "scriptResults.json"
+    },
+    "assignedTo": {
+      "type": "string"
+    },
+    "userKey": {
+      "type": "string"
+    },
+    "executionTime": {
+      "type": "integer"
+    },
+    "testCaseKey": {
+      "type": "string"
+    },
+    "environment": {
+      "type": "string"
+    },
+    "automated": {
+      "type": "boolean"
+    },
+    "actualStartDate": {
+      "type": "string",
+      "format": "date-time",
+      "example": "2024-03-22T11:11:50.000Z"
+    },
+    "comment": {
+      "type": "string"
+    },
+    "id": {
+      "type": "integer"
+    },
+    "projectKey": {
+      "type": "string"
+    },
+    "projectId": {
+      "type": "integer"
+    },
+    "key": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "customFields": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "attachments": {
+      "$ref": "attachments.json"
+    }
+  }
+}

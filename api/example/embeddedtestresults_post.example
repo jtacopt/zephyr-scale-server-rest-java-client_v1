@@ -1,0 +1,28 @@
+[
+    {
+      "status": "Fail",
+      "testCaseKey": "JQA-T1234",
+      "environment": "Firefox",
+      "comment": "The test has failed on some automation tool procedure.",
+      "assignedTo": "vitor.pelizza",
+      "executedBy": "cristiano.caetano",
+      "executionTime": 180000,
+      "actualStartDate": "2016-02-14T19:22:00-0300",
+      "actualEndDate": "2016-02-15T19:22:00-0300",
+      "customFields": {
+        "CI Server": "Bamboo"
+      },
+      "issueLinks": ["JQA-123", "JQA-456"],
+      "scriptResults": [
+        {
+          "index": 0,
+          "status": "Fail",
+          "comment": "This step has failed."
+        }
+      ]
+    },
+    {
+        "status": "Fail",
+        "testCaseKey": "JQA-T5678"
+    }
+]

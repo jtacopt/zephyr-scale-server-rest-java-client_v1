@@ -1,0 +1,11 @@
+{
+    "errorMessages": [
+        "The attachment could not be deleted because it belongs to the test case step."
+    ],
+    "valid": false,
+    "fullErrorMessages": [
+        {
+            "message": "The attachment could not be deleted because it belongs to the test case step."
+        }
+    ]
+}

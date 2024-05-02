@@ -1,0 +1,33 @@
+{
+  "type": "object",
+  "required": [
+    "index",
+    "id"
+  ],
+  "properties": {
+    "testCaseKey": {
+      "type": "string"
+    },
+    "stepParameters": {
+      "type": "array",
+      "items": {
+        "$ref": "stepParameter.json"
+      }
+    },
+    "id": {
+      "type": "number"
+    },
+    "index": {
+      "type": "integer"
+    },
+    "description": {
+      "type": "string"
+    },
+    "testData": {
+      "type": "string"
+    },
+    "expectedResult": {
+      "type": "string"
+    }
+  }
+}

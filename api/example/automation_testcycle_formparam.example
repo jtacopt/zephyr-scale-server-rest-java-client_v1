@@ -1,0 +1,14 @@
+{
+    "name": "Full regression",
+    "description": "Any additional description can be added here.",
+    "jiraProjectVersion": 10000,
+    "folderId": 10001,
+    "customFields": {
+      "Build Number": 20,
+      "Release Date": "2020-01-01",
+      "Pre-Condition(s)": "User should have logged in.",
+      "Implemented": false,
+      "Categories": "A,B",
+      "Tester": "JIRAUSER10000"
+    }
+}

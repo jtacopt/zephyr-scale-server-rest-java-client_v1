@@ -1,0 +1,6 @@
+{
+  status: {
+    statusCode: 401,
+    message: "Client must be authenticated to access this resource."
+  }
+}

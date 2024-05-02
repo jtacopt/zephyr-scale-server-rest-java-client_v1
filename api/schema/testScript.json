@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "required": [
+    "id",
+    "type"
+  ],
+  "properties": {
+    "type": {
+      "type": "string"
+    },
+    "id": {
+      "type": "integer"
+    },
+    "steps": {
+      "$ref": "steps.json"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "type": "object",
+  "required": true,
+  "properties": {
+    "status": {
+      "type": "string"
+    },
+    "environment": {
+      "type": "string"
+    },
+    "comment": {
+      "type": "string"
+    },
+    "userKey": {
+      "type": "string"
+    },
+    "executionTime": {
+      "type": "integer"
+    },
+    "executionDate": {
+      "type": "date"
+    },
+    "scriptResults": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "index": {
+            "type": "integer",
+            "required": true
+          },
+          "status": {
+            "type": "string",
+            "required": true
+          },
+          "comment": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

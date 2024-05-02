@@ -1,0 +1,38 @@
+{
+  "type": "object",
+  "properties": {
+    "traceLinks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "testData": {
+      "type": "string"
+    },
+    "parameterSetId": {
+      "type": "integer"
+    },
+    "stepAttachmentsMapping": {
+      "type": "string"
+    },
+    "expectedResult": {
+      "type": "string"
+    },
+    "executionDate": {
+      "type": "string"
+    },
+    "index": {
+      "type": "integer"
+    },
+    "description": {
+      "type": "string"
+    },
+    "comment": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+// Creating a 'NUMBER' custom field for a 'TEST_PLAN'
+{
+  "projectKey": "JQA",
+  "name": "foo",
+  "required": true,
+  "description": "bar",
+  "type": "NUMBER",
+  "category": "TEST_PLAN"
+}
+
+// Creating a 'NUMBER' custom field for a 'TEST_PLAN'
+{
+  "projectKey": "JQA",
+  "name": "foo",
+  "required": true,
+  "description": "bar",
+  "type": "NUMBER",
+  "category": "TEST_PLAN"
+}
+
+// Creating a 'SINGLE_LINE_TEXT' custom field for a 'TEST_CASE'
+{
+  "projectKey": "JQA",
+  "name": "foo",
+  "required": true,
+  "description": "bar",
+  "type": "SINGLE_LINE_TEXT",
+  "category": "TEST_CASE"
+}
+
+// Creating a 'DECIMAL' custom field for a 'TEST_RUN'
+{
+  "projectKey": "JQA",
+  "name": "foo",
+  "required": true,
+  "description": "bar",
+  "type": "DECIMAL",
+  "category": "TEST_RUN"
+}

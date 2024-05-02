@@ -1,0 +1,38 @@
+// Simple request, using only required fields
+{
+  "projectKey": "JQA",
+  "name": "Plan for a new version"
+}
+
+// Simple request, using custom fields
+{
+  "projectKey": "JQA",
+  "name": "Plan for a new version",
+  "customFields": {
+    "single choice": "Propulsion engines",
+    "multichoice": "Brazil, England",
+    "checkbox": "false",
+    "datepicker": "2017-03-02T16:15:00.000Z",
+    "decimal number": 12.12,
+    "number": 100,
+    "multi line text": "<h1>Plan for a new version</h1><p>Ignite the secondary propulsion engines</p>",
+    "single line": "Ignite the secondary propulsion engines"
+  }
+}
+
+// Full request
+{
+  "projectKey": "JQA",
+  "name": "Plan for a new version",
+  "objective": "The objective.",
+  "folder": "/Orbiter/Cargo Bay",
+  "status": "Approved",
+  "owner": "vitor.pelizza",
+  "labels": ["Smoke", "Functional"],
+  "issueLinks": ["JQA-123", "JQA-456"],
+  "testRunKeys": ["JQA-R123", "JQA-R456"],
+  "customFields": {
+    "single choice": "Propulsion engines",
+    "multichoice": "Brazil, England"
+  },
+}

@@ -1,0 +1,14 @@
+{
+  "type": "object",
+  "required": true,
+  "properties": {
+    "projectKey": {
+      "type": "String",
+      "required": true
+    },
+    "enable": {
+      "type": "boolean",
+      "required": true
+    }
+  }
+}

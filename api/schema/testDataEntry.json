@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "index": {
+      "type": "number"
+    },
+    "id": {
+      "type": "number"
+    },
+    "value": {
+      "type": "string"
+    }
+  }
+}
