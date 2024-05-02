@@ -12,6 +12,7 @@ import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.response.Response;
 import io.restassured.response.ResponseBody;
 import org.apache.http.HttpException;
+import org.apache.http.auth.AuthenticationException;
 
 import java.io.File;
 import java.lang.reflect.Type;
@@ -22,6 +23,7 @@ import java.util.logging.Logger;
 
 import static org.apache.http.HttpStatus.SC_BAD_REQUEST;
 import static org.apache.http.HttpStatus.SC_CREATED;
+import static org.apache.http.HttpStatus.SC_NOT_FOUND;
 import static org.apache.http.HttpStatus.SC_OK;
 import static org.apache.http.HttpStatus.SC_UNAUTHORIZED;
 
@@ -37,25 +39,20 @@ public class ZephyrRestClient {
         this(System.getenv("JIRA_URL"), System.getenv("JIRA_USERNAME"), System.getenv("JIRA_API_TOKEN"));
     }
 
-    public ZephyrRestClient(final String baseUrlString, final String username, final String apiToken) {
+    public ZephyrRestClient(final String baseUrlString) {
+        this(baseUrlString, System.getenv("JIRA_USERNAME"), System.getenv("JIRA_API_TOKEN"));
+    }
+
+    private  ZephyrRestClient(final String baseUrlString, final String username, final String apiToken) {
         this.baseUrlString = baseUrlString;
         this.username = username;
         this.apiToken = apiToken;
     }
 
-
     private RequestSpecBuilder getRequestSpecification() {
         return new RequestSpecBuilder()
                 .setAuth(RestAssured.preemptive().basic(this.username, this.apiToken))
                 .setBaseUri(this.baseUrlString + "/rest/atm/1.0");
-    }
-
-    private String getEnvVariable(final String varName) {
-        String varValue = System.getenv(varName);
-        if (varValue == null) {
-            throw new MissingEnvVariableException(varName + " is not set");
-        }
-        return varValue;
     }
 
     private ApiClient getClient() {
@@ -82,8 +79,10 @@ public class ZephyrRestClient {
         TestCase testCase;
         if (response.getStatusCode() == SC_OK) {
             testCase = response.as(TestCase.class);
-        } else {
+        } else if (response.getStatusCode() == SC_NOT_FOUND) {
             throw new HttpException("The Test Case (" + testCaseKey + ") was not found.");
+        } else {
+            throw new AuthenticationException("Client must be authenticated to access this resource.");
         }
         return testCase;
     }
