@@ -33,7 +33,7 @@ import static io.restassured.http.Method.POST;
 
 public class AutomationApi {
 
-    private Supplier<RequestSpecBuilder> reqSpecSupplier;
+    private final Supplier<RequestSpecBuilder> reqSpecSupplier;
     private Consumer<RequestSpecBuilder> reqSpecCustomizer;
 
     private AutomationApi(Supplier<RequestSpecBuilder> reqSpecSupplier) {
@@ -94,8 +94,8 @@ public class AutomationApi {
         public static final Method REQ_METHOD = POST;
         public static final String REQ_URI = "/automation/execution/cucumber/{projectKey}";
         public static final String PROJECT_KEY_PATH = "projectKey";
-        private RequestSpecBuilder reqSpec;
-        private ResponseSpecBuilder respSpec;
+        private final RequestSpecBuilder reqSpec;
+        private final ResponseSpecBuilder respSpec;
 
         public CreateAutomationExecutionCucumberByProjectKeyOper(RequestSpecBuilder reqSpec) {
             this.reqSpec = reqSpec;

@@ -34,8 +34,6 @@ import static io.restassured.config.RestAssuredConfig.config;
 
 public class ApiClient {
 
-    public static final String BASE_URI = "https://team.atlassian.com/rest/atm/1.0";
-
     private final Config config;
 
     private ApiClient(Config config) {
@@ -95,8 +93,8 @@ public class ApiClient {
     }
 
     public static class Config {
+
         private Supplier<RequestSpecBuilder> reqSpecSupplier = () -> new RequestSpecBuilder()
-                .setBaseUri(BASE_URI)
                 .setConfig(config().objectMapperConfig(objectMapperConfig().defaultObjectMapper(GsonObjectMapper.gson())));
 
         public static Config apiConfig() {

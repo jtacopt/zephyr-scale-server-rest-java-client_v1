@@ -31,7 +31,7 @@ import static io.restassured.http.Method.POST;
 
 public class ProjectApi {
 
-    private Supplier<RequestSpecBuilder> reqSpecSupplier;
+    private final Supplier<RequestSpecBuilder> reqSpecSupplier;
     private Consumer<RequestSpecBuilder> reqSpecCustomizer;
 
     private ProjectApi(Supplier<RequestSpecBuilder> reqSpecSupplier) {
@@ -82,8 +82,8 @@ public class ProjectApi {
         public static final Method REQ_METHOD = POST;
         public static final String REQ_URI = "/project";
 
-        private RequestSpecBuilder reqSpec;
-        private ResponseSpecBuilder respSpec;
+        private final RequestSpecBuilder reqSpec;
+        private final ResponseSpecBuilder respSpec;
 
         public CreateProjectOper(RequestSpecBuilder reqSpec) {
             this.reqSpec = reqSpec;

@@ -32,7 +32,7 @@ import static io.restassured.http.Method.POST;
 
 public class CustomFieldApi {
 
-    private Supplier<RequestSpecBuilder> reqSpecSupplier;
+    private final Supplier<RequestSpecBuilder> reqSpecSupplier;
     private Consumer<RequestSpecBuilder> reqSpecCustomizer;
 
     private CustomFieldApi(Supplier<RequestSpecBuilder> reqSpecSupplier) {
@@ -88,8 +88,8 @@ public class CustomFieldApi {
         public static final Method REQ_METHOD = POST;
         public static final String REQ_URI = "/customfield";
 
-        private RequestSpecBuilder reqSpec;
-        private ResponseSpecBuilder respSpec;
+        private final RequestSpecBuilder reqSpec;
+        private final ResponseSpecBuilder respSpec;
 
         public CreateCustomFieldOper(RequestSpecBuilder reqSpec) {
             this.reqSpec = reqSpec;

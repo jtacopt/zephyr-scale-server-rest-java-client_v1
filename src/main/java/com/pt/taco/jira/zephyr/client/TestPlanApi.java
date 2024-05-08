@@ -36,7 +36,7 @@ import static io.restassured.http.Method.PUT;
 
 public class TestPlanApi {
 
-    private Supplier<RequestSpecBuilder> reqSpecSupplier;
+    private final Supplier<RequestSpecBuilder> reqSpecSupplier;
     private Consumer<RequestSpecBuilder> reqSpecCustomizer;
 
     private TestPlanApi(Supplier<RequestSpecBuilder> reqSpecSupplier) {
@@ -117,8 +117,8 @@ public class TestPlanApi {
         public static final Method REQ_METHOD = POST;
         public static final String REQ_URI = "/testplan";
 
-        private RequestSpecBuilder reqSpec;
-        private ResponseSpecBuilder respSpec;
+        private final RequestSpecBuilder reqSpec;
+        private final ResponseSpecBuilder respSpec;
 
         public CreateTestPlanOper(RequestSpecBuilder reqSpec) {
             this.reqSpec = reqSpec;
@@ -194,8 +194,8 @@ public class TestPlanApi {
         public static final Method REQ_METHOD = POST;
         public static final String REQ_URI = "/testplan/{testPlanKey}/attachments";
         public static final String TEST_PLAN_KEY_PATH = "testPlanKey";
-        private RequestSpecBuilder reqSpec;
-        private ResponseSpecBuilder respSpec;
+        private final RequestSpecBuilder reqSpec;
+        private final ResponseSpecBuilder respSpec;
 
         public CreateTestPlanAttachmentsByTestPlanKeyOper(RequestSpecBuilder reqSpec) {
             this.reqSpec = reqSpec;
@@ -270,8 +270,8 @@ public class TestPlanApi {
         public static final Method REQ_METHOD = DELETE;
         public static final String REQ_URI = "/testplan/{testPlanKey}";
         public static final String TEST_PLAN_KEY_PATH = "testPlanKey";
-        private RequestSpecBuilder reqSpec;
-        private ResponseSpecBuilder respSpec;
+        private final RequestSpecBuilder reqSpec;
+        private final ResponseSpecBuilder respSpec;
 
         public DeleteTestPlanByTestPlanKeyOper(RequestSpecBuilder reqSpec) {
             this.reqSpec = reqSpec;
@@ -340,8 +340,8 @@ public class TestPlanApi {
         public static final String QUERY_QUERY = "query";
         public static final String START_AT_QUERY = "startAt";
         public static final String MAX_RESULTS_QUERY = "maxResults";
-        private RequestSpecBuilder reqSpec;
-        private ResponseSpecBuilder respSpec;
+        private final RequestSpecBuilder reqSpec;
+        private final ResponseSpecBuilder respSpec;
 
         public FindTestPlanOper(RequestSpecBuilder reqSpec) {
             this.reqSpec = reqSpec;
@@ -443,8 +443,8 @@ public class TestPlanApi {
         public static final Method REQ_METHOD = GET;
         public static final String REQ_URI = "/testplan/{testPlanKey}/attachments";
         public static final String TEST_PLAN_KEY_PATH = "testPlanKey";
-        private RequestSpecBuilder reqSpec;
-        private ResponseSpecBuilder respSpec;
+        private final RequestSpecBuilder reqSpec;
+        private final ResponseSpecBuilder respSpec;
 
         public GetTestPlanAttachmentsByTestPlanKeyOper(RequestSpecBuilder reqSpec) {
             this.reqSpec = reqSpec;
@@ -521,8 +521,8 @@ public class TestPlanApi {
         public static final String REQ_URI = "/testplan/{testPlanKey}";
         public static final String TEST_PLAN_KEY_PATH = "testPlanKey";
         public static final String FIELDS_QUERY = "fields";
-        private RequestSpecBuilder reqSpec;
-        private ResponseSpecBuilder respSpec;
+        private final RequestSpecBuilder reqSpec;
+        private final ResponseSpecBuilder respSpec;
 
         public GetTestPlanByTestPlanKeyOper(RequestSpecBuilder reqSpec) {
             this.reqSpec = reqSpec;
@@ -606,8 +606,8 @@ public class TestPlanApi {
         public static final Method REQ_METHOD = PUT;
         public static final String REQ_URI = "/testplan/{testPlanKey}";
         public static final String TEST_PLAN_KEY_PATH = "testPlanKey";
-        private RequestSpecBuilder reqSpec;
-        private ResponseSpecBuilder respSpec;
+        private final RequestSpecBuilder reqSpec;
+        private final ResponseSpecBuilder respSpec;
 
         public UpdateTestPlanByTestPlanKeyOper(RequestSpecBuilder reqSpec) {
             this.reqSpec = reqSpec;

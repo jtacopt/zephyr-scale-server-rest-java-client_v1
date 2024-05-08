@@ -31,7 +31,7 @@ import static io.restassured.http.Method.GET;
 
 public class IssueLinkApi {
 
-    private Supplier<RequestSpecBuilder> reqSpecSupplier;
+    private final Supplier<RequestSpecBuilder> reqSpecSupplier;
     private Consumer<RequestSpecBuilder> reqSpecCustomizer;
 
     private IssueLinkApi(Supplier<RequestSpecBuilder> reqSpecSupplier) {
@@ -84,8 +84,8 @@ public class IssueLinkApi {
         public static final String REQ_URI = "/issuelink/{issueKey}/testcases";
         public static final String ISSUE_KEY_PATH = "issueKey";
         public static final String FIELDS_QUERY = "fields";
-        private RequestSpecBuilder reqSpec;
-        private ResponseSpecBuilder respSpec;
+        private final RequestSpecBuilder reqSpec;
+        private final ResponseSpecBuilder respSpec;
 
         public GetIssueLinkByIssueKeyOper(RequestSpecBuilder reqSpec) {
             this.reqSpec = reqSpec;

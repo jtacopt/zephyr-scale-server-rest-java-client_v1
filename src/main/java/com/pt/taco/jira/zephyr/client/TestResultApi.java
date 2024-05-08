@@ -36,7 +36,7 @@ import static io.restassured.http.Method.POST;
 
 public class TestResultApi {
 
-    private Supplier<RequestSpecBuilder> reqSpecSupplier;
+    private final Supplier<RequestSpecBuilder> reqSpecSupplier;
     private Consumer<RequestSpecBuilder> reqSpecCustomizer;
 
     private TestResultApi(Supplier<RequestSpecBuilder> reqSpecSupplier) {
@@ -107,8 +107,8 @@ public class TestResultApi {
         public static final Method REQ_METHOD = POST;
         public static final String REQ_URI = "/testresult/{testResultId}/attachments";
         public static final String TEST_RESULT_ID_PATH = "testResultId";
-        private RequestSpecBuilder reqSpec;
-        private ResponseSpecBuilder respSpec;
+        private final RequestSpecBuilder reqSpec;
+        private final ResponseSpecBuilder respSpec;
 
         public CreateAttachmentsByTestResultIdOper(RequestSpecBuilder reqSpec) {
             this.reqSpec = reqSpec;
@@ -191,8 +191,8 @@ public class TestResultApi {
         public static final String REQ_URI = "/testresult/{testResultId}/step/{stepIndex}/attachments";
         public static final String TEST_RESULT_ID_PATH = "testResultId";
         public static final String STEP_INDEX_PATH = "stepIndex";
-        private RequestSpecBuilder reqSpec;
-        private ResponseSpecBuilder respSpec;
+        private final RequestSpecBuilder reqSpec;
+        private final ResponseSpecBuilder respSpec;
 
         public CreateAttachmentsByTestResultIdAndStepIndexOper(RequestSpecBuilder reqSpec) {
             this.reqSpec = reqSpec;
@@ -277,8 +277,8 @@ public class TestResultApi {
         public static final Method REQ_METHOD = POST;
         public static final String REQ_URI = "/testresult";
 
-        private RequestSpecBuilder reqSpec;
-        private ResponseSpecBuilder respSpec;
+        private final RequestSpecBuilder reqSpec;
+        private final ResponseSpecBuilder respSpec;
 
         public CreateTestResultOper(RequestSpecBuilder reqSpec) {
             this.reqSpec = reqSpec;
@@ -354,8 +354,8 @@ public class TestResultApi {
         public static final Method REQ_METHOD = GET;
         public static final String REQ_URI = "/testresult/{testResultId}/attachments";
         public static final String TEST_RESULT_ID_PATH = "testResultId";
-        private RequestSpecBuilder reqSpec;
-        private ResponseSpecBuilder respSpec;
+        private final RequestSpecBuilder reqSpec;
+        private final ResponseSpecBuilder respSpec;
 
         public GetAttachmentsByTestResultIdOper(RequestSpecBuilder reqSpec) {
             this.reqSpec = reqSpec;
@@ -432,8 +432,8 @@ public class TestResultApi {
         public static final String REQ_URI = "/testresult/{testResultId}/step/{stepIndex}/attachments";
         public static final String TEST_RESULT_ID_PATH = "testResultId";
         public static final String STEP_INDEX_PATH = "stepIndex";
-        private RequestSpecBuilder reqSpec;
-        private ResponseSpecBuilder respSpec;
+        private final RequestSpecBuilder reqSpec;
+        private final ResponseSpecBuilder respSpec;
 
         public GetTestresultTestResultIdStepStepIndexAttachmentsOper(RequestSpecBuilder reqSpec) {
             this.reqSpec = reqSpec;

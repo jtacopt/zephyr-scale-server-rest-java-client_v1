@@ -33,7 +33,7 @@ import static io.restassured.http.Method.POST;
 
 public class DeleteExecutionApi {
 
-    private Supplier<RequestSpecBuilder> reqSpecSupplier;
+    private final Supplier<RequestSpecBuilder> reqSpecSupplier;
     private Consumer<RequestSpecBuilder> reqSpecCustomizer;
 
     private DeleteExecutionApi(Supplier<RequestSpecBuilder> reqSpecSupplier) {
@@ -89,8 +89,8 @@ public class DeleteExecutionApi {
         public static final Method REQ_METHOD = POST;
         public static final String REQ_URI = "/delete/executiondeletion";
 
-        private RequestSpecBuilder reqSpec;
-        private ResponseSpecBuilder respSpec;
+        private final RequestSpecBuilder reqSpec;
+        private final ResponseSpecBuilder respSpec;
 
         public DeleteTestResultsOper(RequestSpecBuilder reqSpec) {
             this.reqSpec = reqSpec;
@@ -165,8 +165,8 @@ public class DeleteExecutionApi {
         public static final Method REQ_METHOD = GET;
         public static final String REQ_URI = "/delete/executiondeletion/status";
 
-        private RequestSpecBuilder reqSpec;
-        private ResponseSpecBuilder respSpec;
+        private final RequestSpecBuilder reqSpec;
+        private final ResponseSpecBuilder respSpec;
 
         public GetDeleteExecutionStatusOper(RequestSpecBuilder reqSpec) {
             this.reqSpec = reqSpec;

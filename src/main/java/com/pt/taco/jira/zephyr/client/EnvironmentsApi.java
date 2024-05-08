@@ -33,7 +33,7 @@ import static io.restassured.http.Method.POST;
 
 public class EnvironmentsApi {
 
-    private Supplier<RequestSpecBuilder> reqSpecSupplier;
+    private final Supplier<RequestSpecBuilder> reqSpecSupplier;
     private Consumer<RequestSpecBuilder> reqSpecCustomizer;
 
     private EnvironmentsApi(Supplier<RequestSpecBuilder> reqSpecSupplier) {
@@ -89,8 +89,8 @@ public class EnvironmentsApi {
         public static final Method REQ_METHOD = POST;
         public static final String REQ_URI = "/environments";
 
-        private RequestSpecBuilder reqSpec;
-        private ResponseSpecBuilder respSpec;
+        private final RequestSpecBuilder reqSpec;
+        private final ResponseSpecBuilder respSpec;
 
         public CreateEnvironmentsOper(RequestSpecBuilder reqSpec) {
             this.reqSpec = reqSpec;
@@ -166,8 +166,8 @@ public class EnvironmentsApi {
         public static final Method REQ_METHOD = GET;
         public static final String REQ_URI = "/environments";
         public static final String PROJECT_KEY_QUERY = "projectKey";
-        private RequestSpecBuilder reqSpec;
-        private ResponseSpecBuilder respSpec;
+        private final RequestSpecBuilder reqSpec;
+        private final ResponseSpecBuilder respSpec;
 
         public GetEnvironmentsOper(RequestSpecBuilder reqSpec) {
             this.reqSpec = reqSpec;

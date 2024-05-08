@@ -38,7 +38,7 @@ import static io.restassured.http.Method.PUT;
 
 public class TestCasesApi {
 
-    private Supplier<RequestSpecBuilder> reqSpecSupplier;
+    private final Supplier<RequestSpecBuilder> reqSpecSupplier;
     private Consumer<RequestSpecBuilder> reqSpecCustomizer;
 
     private TestCasesApi(Supplier<RequestSpecBuilder> reqSpecSupplier) {
@@ -134,8 +134,8 @@ public class TestCasesApi {
         public static final Method REQ_METHOD = POST;
         public static final String REQ_URI = "/testcase";
 
-        private RequestSpecBuilder reqSpec;
-        private ResponseSpecBuilder respSpec;
+        private final RequestSpecBuilder reqSpec;
+        private final ResponseSpecBuilder respSpec;
 
         public CreateTestCaseOper(RequestSpecBuilder reqSpec) {
             this.reqSpec = reqSpec;
@@ -211,8 +211,8 @@ public class TestCasesApi {
         public static final Method REQ_METHOD = POST;
         public static final String REQ_URI = "/testcase/{testCaseKey}/attachments";
         public static final String TEST_CASE_KEY_PATH = "testCaseKey";
-        private RequestSpecBuilder reqSpec;
-        private ResponseSpecBuilder respSpec;
+        private final RequestSpecBuilder reqSpec;
+        private final ResponseSpecBuilder respSpec;
 
         public CreateTestCaseAttachmentsOper(RequestSpecBuilder reqSpec) {
             this.reqSpec = reqSpec;
@@ -290,8 +290,8 @@ public class TestCasesApi {
         public static final String REQ_URI = "/testcase/{testCaseKey}/step/{stepIndex}/attachments";
         public static final String STEP_INDEX_PATH = "stepIndex";
         public static final String TEST_CASE_KEY_PATH = "testCaseKey";
-        private RequestSpecBuilder reqSpec;
-        private ResponseSpecBuilder respSpec;
+        private final RequestSpecBuilder reqSpec;
+        private final ResponseSpecBuilder respSpec;
 
         public CreateTestCaseStepAttachmentsByTestCaseKeyAndStepIndexOper(RequestSpecBuilder reqSpec) {
             this.reqSpec = reqSpec;
@@ -375,8 +375,8 @@ public class TestCasesApi {
         public static final Method REQ_METHOD = DELETE;
         public static final String REQ_URI = "/testcase/{testCaseKey}";
         public static final String TEST_CASE_KEY_PATH = "testCaseKey";
-        private RequestSpecBuilder reqSpec;
-        private ResponseSpecBuilder respSpec;
+        private final RequestSpecBuilder reqSpec;
+        private final ResponseSpecBuilder respSpec;
 
         public DeleteTestCaseByTestCaseKeyOper(RequestSpecBuilder reqSpec) {
             this.reqSpec = reqSpec;
@@ -445,8 +445,8 @@ public class TestCasesApi {
         public static final String QUERY_QUERY = "query";
         public static final String START_AT_QUERY = "startAt";
         public static final String MAX_RESULTS_QUERY = "maxResults";
-        private RequestSpecBuilder reqSpec;
-        private ResponseSpecBuilder respSpec;
+        private final RequestSpecBuilder reqSpec;
+        private final ResponseSpecBuilder respSpec;
 
         public FindTestCaseOper(RequestSpecBuilder reqSpec) {
             this.reqSpec = reqSpec;
@@ -550,8 +550,8 @@ public class TestCasesApi {
         public static final String REQ_URI = "/testcase/{testCaseKey}/step/{stepIndex}/attachments";
         public static final String STEP_INDEX_PATH = "stepIndex";
         public static final String TEST_CASE_KEY_PATH = "testCaseKey";
-        private RequestSpecBuilder reqSpec;
-        private ResponseSpecBuilder respSpec;
+        private final RequestSpecBuilder reqSpec;
+        private final ResponseSpecBuilder respSpec;
 
         public GetAttachmentsFromStepByTestCaseKeyOper(RequestSpecBuilder reqSpec) {
             this.reqSpec = reqSpec;
@@ -635,8 +635,8 @@ public class TestCasesApi {
         public static final Method REQ_METHOD = GET;
         public static final String REQ_URI = "/testcase/{testCaseKey}/testresult/latest";
         public static final String TEST_CASE_KEY_PATH = "testCaseKey";
-        private RequestSpecBuilder reqSpec;
-        private ResponseSpecBuilder respSpec;
+        private final RequestSpecBuilder reqSpec;
+        private final ResponseSpecBuilder respSpec;
 
         public GetLastTestResultByTestCaseKeyOper(RequestSpecBuilder reqSpec) {
             this.reqSpec = reqSpec;
@@ -711,8 +711,8 @@ public class TestCasesApi {
         public static final Method REQ_METHOD = GET;
         public static final String REQ_URI = "/testcase/{testCaseKey}/attachments";
         public static final String TEST_CASE_KEY_PATH = "testCaseKey";
-        private RequestSpecBuilder reqSpec;
-        private ResponseSpecBuilder respSpec;
+        private final RequestSpecBuilder reqSpec;
+        private final ResponseSpecBuilder respSpec;
 
         public GetTestCaseAttachmentsOper(RequestSpecBuilder reqSpec) {
             this.reqSpec = reqSpec;
@@ -789,8 +789,8 @@ public class TestCasesApi {
         public static final String REQ_URI = "/testcase/{testCaseKey}";
         public static final String TEST_CASE_KEY_PATH = "testCaseKey";
         public static final String FIELDS_QUERY = "fields";
-        private RequestSpecBuilder reqSpec;
-        private ResponseSpecBuilder respSpec;
+        private final RequestSpecBuilder reqSpec;
+        private final ResponseSpecBuilder respSpec;
 
         public GetTestCaseByTestCaseKeyOper(RequestSpecBuilder reqSpec) {
             this.reqSpec = reqSpec;
@@ -874,8 +874,8 @@ public class TestCasesApi {
         public static final Method REQ_METHOD = PUT;
         public static final String REQ_URI = "/testcase/{testCaseKey}";
         public static final String TEST_CASE_KEY_PATH = "testCaseKey";
-        private RequestSpecBuilder reqSpec;
-        private ResponseSpecBuilder respSpec;
+        private final RequestSpecBuilder reqSpec;
+        private final ResponseSpecBuilder respSpec;
 
         public UpdateTestCaseByTestCaseKeyOper(RequestSpecBuilder reqSpec) {
             this.reqSpec = reqSpec;

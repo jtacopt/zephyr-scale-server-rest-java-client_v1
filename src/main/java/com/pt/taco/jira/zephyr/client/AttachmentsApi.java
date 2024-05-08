@@ -29,7 +29,7 @@ import static io.restassured.http.Method.DELETE;
 
 public class AttachmentsApi {
 
-    private Supplier<RequestSpecBuilder> reqSpecSupplier;
+    private final Supplier<RequestSpecBuilder> reqSpecSupplier;
     private Consumer<RequestSpecBuilder> reqSpecCustomizer;
 
     private AttachmentsApi(Supplier<RequestSpecBuilder> reqSpecSupplier) {
@@ -79,8 +79,8 @@ public class AttachmentsApi {
         public static final Method REQ_METHOD = DELETE;
         public static final String REQ_URI = "/attachments/{id}";
         public static final String ID_PATH = "id";
-        private RequestSpecBuilder reqSpec;
-        private ResponseSpecBuilder respSpec;
+        private final RequestSpecBuilder reqSpec;
+        private final ResponseSpecBuilder respSpec;
 
         public DeleteAttachmentsByIdOper(RequestSpecBuilder reqSpec) {
             this.reqSpec = reqSpec;

@@ -37,7 +37,7 @@ import static io.restassured.http.Method.PUT;
 
 public class TestRunApi {
 
-    private Supplier<RequestSpecBuilder> reqSpecSupplier;
+    private final Supplier<RequestSpecBuilder> reqSpecSupplier;
     private Consumer<RequestSpecBuilder> reqSpecCustomizer;
 
     private TestRunApi(Supplier<RequestSpecBuilder> reqSpecSupplier) {
@@ -133,8 +133,8 @@ public class TestRunApi {
         public static final Method REQ_METHOD = POST;
         public static final String REQ_URI = "/testrun/{testRunKey}/attachments";
         public static final String TEST_RUN_KEY_PATH = "testRunKey";
-        private RequestSpecBuilder reqSpec;
-        private ResponseSpecBuilder respSpec;
+        private final RequestSpecBuilder reqSpec;
+        private final ResponseSpecBuilder respSpec;
 
         public CreateAttachmentsByTestRunKeyOper(RequestSpecBuilder reqSpec) {
             this.reqSpec = reqSpec;
@@ -217,8 +217,8 @@ public class TestRunApi {
         public static final String TEST_RUN_KEY_PATH = "testRunKey";
         public static final String ENVIRONMENT_QUERY = "environment";
         public static final String USER_KEY_QUERY = "userKey";
-        private RequestSpecBuilder reqSpec;
-        private ResponseSpecBuilder respSpec;
+        private final RequestSpecBuilder reqSpec;
+        private final ResponseSpecBuilder respSpec;
 
         public CreateTestResultByTestRunKeyAndTestCaseKeyOper(RequestSpecBuilder reqSpec) {
             this.reqSpec = reqSpec;
@@ -335,8 +335,8 @@ public class TestRunApi {
         public static final String TEST_RUN_KEY_PATH = "testRunKey";
         public static final String ENVIRONMENT_QUERY = "environment";
         public static final String USER_KEY_QUERY = "userKey";
-        private RequestSpecBuilder reqSpec;
-        private ResponseSpecBuilder respSpec;
+        private final RequestSpecBuilder reqSpec;
+        private final ResponseSpecBuilder respSpec;
 
         public CreateTestResultsByTestRunKeyOper(RequestSpecBuilder reqSpec) {
             this.reqSpec = reqSpec;
@@ -439,8 +439,8 @@ public class TestRunApi {
         public static final Method REQ_METHOD = POST;
         public static final String REQ_URI = "/testrun";
 
-        private RequestSpecBuilder reqSpec;
-        private ResponseSpecBuilder respSpec;
+        private final RequestSpecBuilder reqSpec;
+        private final ResponseSpecBuilder respSpec;
 
         public CreateTestRunOper(RequestSpecBuilder reqSpec) {
             this.reqSpec = reqSpec;
@@ -585,8 +585,8 @@ public class TestRunApi {
         public static final String QUERY_QUERY = "query";
         public static final String START_AT_QUERY = "startAt";
         public static final String MAX_RESULTS_QUERY = "maxResults";
-        private RequestSpecBuilder reqSpec;
-        private ResponseSpecBuilder respSpec;
+        private final RequestSpecBuilder reqSpec;
+        private final ResponseSpecBuilder respSpec;
 
         public FindTestRunOper(RequestSpecBuilder reqSpec) {
             this.reqSpec = reqSpec;
@@ -688,8 +688,8 @@ public class TestRunApi {
         public static final Method REQ_METHOD = GET;
         public static final String REQ_URI = "/testrun/{testRunKey}/testresults";
         public static final String TEST_RUN_KEY_PATH = "testRunKey";
-        private RequestSpecBuilder reqSpec;
-        private ResponseSpecBuilder respSpec;
+        private final RequestSpecBuilder reqSpec;
+        private final ResponseSpecBuilder respSpec;
 
         public GetTestResultsByTestRunKeyOper(RequestSpecBuilder reqSpec) {
             this.reqSpec = reqSpec;
@@ -764,8 +764,8 @@ public class TestRunApi {
         public static final Method REQ_METHOD = GET;
         public static final String REQ_URI = "/testrun/{testRunKey}/attachments";
         public static final String TEST_RUN_KEY_PATH = "testRunKey";
-        private RequestSpecBuilder reqSpec;
-        private ResponseSpecBuilder respSpec;
+        private final RequestSpecBuilder reqSpec;
+        private final ResponseSpecBuilder respSpec;
 
         public GetTestRunAttachmentsByTestRunKeyOper(RequestSpecBuilder reqSpec) {
             this.reqSpec = reqSpec;
@@ -842,8 +842,8 @@ public class TestRunApi {
         public static final String REQ_URI = "/testrun/{testRunKey}";
         public static final String TEST_RUN_KEY_PATH = "testRunKey";
         public static final String FIELDS_QUERY = "fields";
-        private RequestSpecBuilder reqSpec;
-        private ResponseSpecBuilder respSpec;
+        private final RequestSpecBuilder reqSpec;
+        private final ResponseSpecBuilder respSpec;
 
         public GetTestRunByTestRunKeyOper(RequestSpecBuilder reqSpec) {
             this.reqSpec = reqSpec;
@@ -934,8 +934,8 @@ public class TestRunApi {
         public static final String TEST_RUN_KEY_PATH = "testRunKey";
         public static final String ENVIRONMENT_QUERY = "environment";
         public static final String USER_KEY_QUERY = "userKey";
-        private RequestSpecBuilder reqSpec;
-        private ResponseSpecBuilder respSpec;
+        private final RequestSpecBuilder reqSpec;
+        private final ResponseSpecBuilder respSpec;
 
         public UpdateTestResultByTestRunKeyAndTestCaseKeyOper(RequestSpecBuilder reqSpec) {
             this.reqSpec = reqSpec;
