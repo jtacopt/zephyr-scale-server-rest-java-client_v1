@@ -132,7 +132,7 @@ public class TestCasesApi {
     public static class CreateTestCaseOper implements Oper {
 
         public static final Method REQ_METHOD = POST;
-        public static final String REQ_URI = "/testcase";
+        public static final String REQ_URI = "/rest/atm/1.0/testcase";
 
         private final RequestSpecBuilder reqSpec;
         private final ResponseSpecBuilder respSpec;
@@ -209,7 +209,7 @@ public class TestCasesApi {
     public static class CreateTestCaseAttachmentsOper implements Oper {
 
         public static final Method REQ_METHOD = POST;
-        public static final String REQ_URI = "/testcase/{testCaseKey}/attachments";
+        public static final String REQ_URI = "/rest/atm/1.0/testcase/{testCaseKey}/attachments";
         public static final String TEST_CASE_KEY_PATH = "testCaseKey";
         private final RequestSpecBuilder reqSpec;
         private final ResponseSpecBuilder respSpec;
@@ -287,7 +287,7 @@ public class TestCasesApi {
     public static class CreateTestCaseStepAttachmentsByTestCaseKeyAndStepIndexOper implements Oper {
 
         public static final Method REQ_METHOD = POST;
-        public static final String REQ_URI = "/testcase/{testCaseKey}/step/{stepIndex}/attachments";
+        public static final String REQ_URI = "/rest/atm/1.0/testcase/{testCaseKey}/step/{stepIndex}/attachments";
         public static final String STEP_INDEX_PATH = "stepIndex";
         public static final String TEST_CASE_KEY_PATH = "testCaseKey";
         private final RequestSpecBuilder reqSpec;
@@ -373,7 +373,7 @@ public class TestCasesApi {
     public static class DeleteTestCaseByTestCaseKeyOper implements Oper {
 
         public static final Method REQ_METHOD = DELETE;
-        public static final String REQ_URI = "/testcase/{testCaseKey}";
+        public static final String REQ_URI = "/rest/atm/1.0/testcase/{testCaseKey}";
         public static final String TEST_CASE_KEY_PATH = "testCaseKey";
         private final RequestSpecBuilder reqSpec;
         private final ResponseSpecBuilder respSpec;
@@ -440,7 +440,7 @@ public class TestCasesApi {
     public static class FindTestCaseOper implements Oper {
 
         public static final Method REQ_METHOD = GET;
-        public static final String REQ_URI = "/testcase/search";
+        public static final String REQ_URI = "/rest/atm/1.0/testcase/search";
         public static final String FIELDS_QUERY = "fields";
         public static final String QUERY_QUERY = "query";
         public static final String START_AT_QUERY = "startAt";
@@ -547,7 +547,7 @@ public class TestCasesApi {
     public static class GetAttachmentsFromStepByTestCaseKeyOper implements Oper {
 
         public static final Method REQ_METHOD = GET;
-        public static final String REQ_URI = "/testcase/{testCaseKey}/step/{stepIndex}/attachments";
+        public static final String REQ_URI = "/rest/atm/1.0/testcase/{testCaseKey}/step/{stepIndex}/attachments";
         public static final String STEP_INDEX_PATH = "stepIndex";
         public static final String TEST_CASE_KEY_PATH = "testCaseKey";
         private final RequestSpecBuilder reqSpec;
@@ -633,7 +633,7 @@ public class TestCasesApi {
     public static class GetLastTestResultByTestCaseKeyOper implements Oper {
 
         public static final Method REQ_METHOD = GET;
-        public static final String REQ_URI = "/testcase/{testCaseKey}/testresult/latest";
+        public static final String REQ_URI = "/rest/atm/1.0/testcase/{testCaseKey}/testresult/latest";
         public static final String TEST_CASE_KEY_PATH = "testCaseKey";
         private final RequestSpecBuilder reqSpec;
         private final ResponseSpecBuilder respSpec;
@@ -709,7 +709,7 @@ public class TestCasesApi {
     public static class GetTestCaseAttachmentsOper implements Oper {
 
         public static final Method REQ_METHOD = GET;
-        public static final String REQ_URI = "/testcase/{testCaseKey}/attachments";
+        public static final String REQ_URI = "/rest/atm/1.0/testcase/{testCaseKey}/attachments";
         public static final String TEST_CASE_KEY_PATH = "testCaseKey";
         private final RequestSpecBuilder reqSpec;
         private final ResponseSpecBuilder respSpec;
@@ -786,7 +786,7 @@ public class TestCasesApi {
     public static class GetTestCaseByTestCaseKeyOper implements Oper {
 
         public static final Method REQ_METHOD = GET;
-        public static final String REQ_URI = "/testcase/{testCaseKey}";
+        public static final String REQ_URI = "/rest/atm/1.0/testcase/{testCaseKey}";
         public static final String TEST_CASE_KEY_PATH = "testCaseKey";
         public static final String FIELDS_QUERY = "fields";
         private final RequestSpecBuilder reqSpec;
@@ -872,7 +872,7 @@ public class TestCasesApi {
     public static class UpdateTestCaseByTestCaseKeyOper implements Oper {
 
         public static final Method REQ_METHOD = PUT;
-        public static final String REQ_URI = "/testcase/{testCaseKey}";
+        public static final String REQ_URI = "/rest/atm/1.0/testcase/{testCaseKey}";
         public static final String TEST_CASE_KEY_PATH = "testCaseKey";
         private final RequestSpecBuilder reqSpec;
         private final ResponseSpecBuilder respSpec;

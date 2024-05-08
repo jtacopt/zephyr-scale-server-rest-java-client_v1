@@ -77,7 +77,7 @@ public class AttachmentsApi {
     public static class DeleteAttachmentsByIdOper implements Oper {
 
         public static final Method REQ_METHOD = DELETE;
-        public static final String REQ_URI = "/attachments/{id}";
+        public static final String REQ_URI = "/rest/atm/1.0/attachments/{id}";
         public static final String ID_PATH = "id";
         private final RequestSpecBuilder reqSpec;
         private final ResponseSpecBuilder respSpec;

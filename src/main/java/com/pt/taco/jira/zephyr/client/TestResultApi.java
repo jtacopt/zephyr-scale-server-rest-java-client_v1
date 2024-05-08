@@ -105,7 +105,7 @@ public class TestResultApi {
     public static class CreateAttachmentsByTestResultIdOper implements Oper {
 
         public static final Method REQ_METHOD = POST;
-        public static final String REQ_URI = "/testresult/{testResultId}/attachments";
+        public static final String REQ_URI = "/rest/atm/1.0/testresult/{testResultId}/attachments";
         public static final String TEST_RESULT_ID_PATH = "testResultId";
         private final RequestSpecBuilder reqSpec;
         private final ResponseSpecBuilder respSpec;
@@ -188,7 +188,7 @@ public class TestResultApi {
     public static class CreateAttachmentsByTestResultIdAndStepIndexOper implements Oper {
 
         public static final Method REQ_METHOD = POST;
-        public static final String REQ_URI = "/testresult/{testResultId}/step/{stepIndex}/attachments";
+        public static final String REQ_URI = "/rest/atm/1.0/testresult/{testResultId}/step/{stepIndex}/attachments";
         public static final String TEST_RESULT_ID_PATH = "testResultId";
         public static final String STEP_INDEX_PATH = "stepIndex";
         private final RequestSpecBuilder reqSpec;
@@ -275,7 +275,7 @@ public class TestResultApi {
     public static class CreateTestResultOper implements Oper {
 
         public static final Method REQ_METHOD = POST;
-        public static final String REQ_URI = "/testresult";
+        public static final String REQ_URI = "/rest/atm/1.0/testresult";
 
         private final RequestSpecBuilder reqSpec;
         private final ResponseSpecBuilder respSpec;
@@ -352,7 +352,7 @@ public class TestResultApi {
     public static class GetAttachmentsByTestResultIdOper implements Oper {
 
         public static final Method REQ_METHOD = GET;
-        public static final String REQ_URI = "/testresult/{testResultId}/attachments";
+        public static final String REQ_URI = "/rest/atm/1.0/testresult/{testResultId}/attachments";
         public static final String TEST_RESULT_ID_PATH = "testResultId";
         private final RequestSpecBuilder reqSpec;
         private final ResponseSpecBuilder respSpec;
@@ -429,7 +429,7 @@ public class TestResultApi {
     public static class GetTestresultTestResultIdStepStepIndexAttachmentsOper implements Oper {
 
         public static final Method REQ_METHOD = GET;
-        public static final String REQ_URI = "/testresult/{testResultId}/step/{stepIndex}/attachments";
+        public static final String REQ_URI = "/rest/atm/1.0/testresult/{testResultId}/step/{stepIndex}/attachments";
         public static final String TEST_RESULT_ID_PATH = "testResultId";
         public static final String STEP_INDEX_PATH = "stepIndex";
         private final RequestSpecBuilder reqSpec;

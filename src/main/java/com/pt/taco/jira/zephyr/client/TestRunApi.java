@@ -131,7 +131,7 @@ public class TestRunApi {
     public static class CreateAttachmentsByTestRunKeyOper implements Oper {
 
         public static final Method REQ_METHOD = POST;
-        public static final String REQ_URI = "/testrun/{testRunKey}/attachments";
+        public static final String REQ_URI = "/rest/atm/1.0/testrun/{testRunKey}/attachments";
         public static final String TEST_RUN_KEY_PATH = "testRunKey";
         private final RequestSpecBuilder reqSpec;
         private final ResponseSpecBuilder respSpec;
@@ -212,7 +212,7 @@ public class TestRunApi {
     public static class CreateTestResultByTestRunKeyAndTestCaseKeyOper implements Oper {
 
         public static final Method REQ_METHOD = POST;
-        public static final String REQ_URI = "/testrun/{testRunKey}/testcase/{testCaseKey}/testresult";
+        public static final String REQ_URI = "/rest/atm/1.0/testrun/{testRunKey}/testcase/{testCaseKey}/testresult";
         public static final String TEST_CASE_KEY_PATH = "testCaseKey";
         public static final String TEST_RUN_KEY_PATH = "testRunKey";
         public static final String ENVIRONMENT_QUERY = "environment";
@@ -331,7 +331,7 @@ public class TestRunApi {
     public static class CreateTestResultsByTestRunKeyOper implements Oper {
 
         public static final Method REQ_METHOD = POST;
-        public static final String REQ_URI = "/testrun/{testRunKey}/testresults";
+        public static final String REQ_URI = "/rest/atm/1.0/testrun/{testRunKey}/testresults";
         public static final String TEST_RUN_KEY_PATH = "testRunKey";
         public static final String ENVIRONMENT_QUERY = "environment";
         public static final String USER_KEY_QUERY = "userKey";
@@ -437,7 +437,7 @@ public class TestRunApi {
     public static class CreateTestRunOper implements Oper {
 
         public static final Method REQ_METHOD = POST;
-        public static final String REQ_URI = "/testrun";
+        public static final String REQ_URI = "/rest/atm/1.0/testrun";
 
         private final RequestSpecBuilder reqSpec;
         private final ResponseSpecBuilder respSpec;
@@ -513,7 +513,7 @@ public class TestRunApi {
     public static class DeleteTestRunByTestRunKeyOper implements Oper {
 
         public static final Method REQ_METHOD = DELETE;
-        public static final String REQ_URI = "/testrun/{testRunKey}";
+        public static final String REQ_URI = "/rest/atm/1.0/testrun/{testRunKey}";
         public static final String TEST_RUN_KEY_PATH = "testRunKey";
         private RequestSpecBuilder reqSpec;
         private ResponseSpecBuilder respSpec;
@@ -580,7 +580,7 @@ public class TestRunApi {
     public static class FindTestRunOper implements Oper {
 
         public static final Method REQ_METHOD = GET;
-        public static final String REQ_URI = "/testrun/search";
+        public static final String REQ_URI = "/rest/atm/1.0/testrun/search";
         public static final String FIELDS_QUERY = "fields";
         public static final String QUERY_QUERY = "query";
         public static final String START_AT_QUERY = "startAt";
@@ -686,7 +686,7 @@ public class TestRunApi {
     public static class GetTestResultsByTestRunKeyOper implements Oper {
 
         public static final Method REQ_METHOD = GET;
-        public static final String REQ_URI = "/testrun/{testRunKey}/testresults";
+        public static final String REQ_URI = "/rest/atm/1.0/testrun/{testRunKey}/testresults";
         public static final String TEST_RUN_KEY_PATH = "testRunKey";
         private final RequestSpecBuilder reqSpec;
         private final ResponseSpecBuilder respSpec;
@@ -762,7 +762,7 @@ public class TestRunApi {
     public static class GetTestRunAttachmentsByTestRunKeyOper implements Oper {
 
         public static final Method REQ_METHOD = GET;
-        public static final String REQ_URI = "/testrun/{testRunKey}/attachments";
+        public static final String REQ_URI = "/rest/atm/1.0/testrun/{testRunKey}/attachments";
         public static final String TEST_RUN_KEY_PATH = "testRunKey";
         private final RequestSpecBuilder reqSpec;
         private final ResponseSpecBuilder respSpec;
@@ -839,7 +839,7 @@ public class TestRunApi {
     public static class GetTestRunByTestRunKeyOper implements Oper {
 
         public static final Method REQ_METHOD = GET;
-        public static final String REQ_URI = "/testrun/{testRunKey}";
+        public static final String REQ_URI = "/rest/atm/1.0/testrun/{testRunKey}";
         public static final String TEST_RUN_KEY_PATH = "testRunKey";
         public static final String FIELDS_QUERY = "fields";
         private final RequestSpecBuilder reqSpec;
@@ -929,7 +929,7 @@ public class TestRunApi {
     public static class UpdateTestResultByTestRunKeyAndTestCaseKeyOper implements Oper {
 
         public static final Method REQ_METHOD = PUT;
-        public static final String REQ_URI = "/testrun/{testRunKey}/testcase/{testCaseKey}/testresult";
+        public static final String REQ_URI = "/rest/atm/1.0/testrun/{testRunKey}/testcase/{testCaseKey}/testresult";
         public static final String TEST_CASE_KEY_PATH = "testCaseKey";
         public static final String TEST_RUN_KEY_PATH = "testRunKey";
         public static final String ENVIRONMENT_QUERY = "environment";

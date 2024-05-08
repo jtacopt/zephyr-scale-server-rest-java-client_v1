@@ -86,7 +86,7 @@ public class CustomFieldApi {
     public static class CreateCustomFieldOper implements Oper {
 
         public static final Method REQ_METHOD = POST;
-        public static final String REQ_URI = "/customfield";
+        public static final String REQ_URI = "/rest/atm/1.0/rest/atm/1.0/customfield";
 
         private final RequestSpecBuilder reqSpec;
         private final ResponseSpecBuilder respSpec;
@@ -164,7 +164,7 @@ public class CustomFieldApi {
     public static class CreateCustomFieldOptionByCustomFieldIdOper implements Oper {
 
         public static final Method REQ_METHOD = POST;
-        public static final String REQ_URI = "/customfield/{customFieldId}/option";
+        public static final String REQ_URI = "/rest/atm/1.0/customfield/{customFieldId}/option";
         public static final String CUSTOM_FIELD_ID_PATH = "customFieldId";
         private RequestSpecBuilder reqSpec;
         private ResponseSpecBuilder respSpec;

@@ -80,7 +80,7 @@ public class ProjectApi {
     public static class CreateProjectOper implements Oper {
 
         public static final Method REQ_METHOD = POST;
-        public static final String REQ_URI = "/project";
+        public static final String REQ_URI = "/rest/atm/1.0/project";
 
         private final RequestSpecBuilder reqSpec;
         private final ResponseSpecBuilder respSpec;

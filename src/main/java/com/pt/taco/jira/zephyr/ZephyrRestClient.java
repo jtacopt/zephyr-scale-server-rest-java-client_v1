@@ -52,7 +52,7 @@ public class ZephyrRestClient {
     private RequestSpecBuilder getRequestSpecification() {
         return new RequestSpecBuilder()
                 .setAuth(RestAssured.preemptive().basic(this.username, this.apiToken))
-                .setBaseUri(this.baseUrlString + "/rest/atm/1.0");
+                .setBaseUri(this.baseUrlString);
     }
 
     private ApiClient getClient() {

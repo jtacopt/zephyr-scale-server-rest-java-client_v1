@@ -87,7 +87,7 @@ public class FolderApi {
     public static class CreateFolderOper implements Oper {
 
         public static final Method REQ_METHOD = POST;
-        public static final String REQ_URI = "/folder";
+        public static final String REQ_URI = "/rest/atm/1.0/folder";
 
         private final RequestSpecBuilder reqSpec;
         private final ResponseSpecBuilder respSpec;
@@ -164,7 +164,7 @@ public class FolderApi {
     public static class UpdateFolderByFolderIdOper implements Oper {
 
         public static final Method REQ_METHOD = PUT;
-        public static final String REQ_URI = "/folder/{folderId}";
+        public static final String REQ_URI = "/rest/atm/1.0/folder/{folderId}";
         public static final String FOLDER_ID_PATH = "folderId";
         private final RequestSpecBuilder reqSpec;
         private final ResponseSpecBuilder respSpec;

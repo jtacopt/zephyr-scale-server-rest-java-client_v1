@@ -87,7 +87,7 @@ public class DeleteExecutionApi {
     public static class DeleteTestResultsOper implements Oper {
 
         public static final Method REQ_METHOD = POST;
-        public static final String REQ_URI = "/delete/executiondeletion";
+        public static final String REQ_URI = "/rest/atm/1.0/delete/executiondeletion";
 
         private final RequestSpecBuilder reqSpec;
         private final ResponseSpecBuilder respSpec;
@@ -163,7 +163,7 @@ public class DeleteExecutionApi {
     public static class GetDeleteExecutionStatusOper implements Oper {
 
         public static final Method REQ_METHOD = GET;
-        public static final String REQ_URI = "/delete/executiondeletion/status";
+        public static final String REQ_URI = "/rest/atm/1.0/delete/executiondeletion/status";
 
         private final RequestSpecBuilder reqSpec;
         private final ResponseSpecBuilder respSpec;

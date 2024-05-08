@@ -115,7 +115,7 @@ public class TestPlanApi {
     public static class CreateTestPlanOper implements Oper {
 
         public static final Method REQ_METHOD = POST;
-        public static final String REQ_URI = "/testplan";
+        public static final String REQ_URI = "/rest/atm/1.0/testplan";
 
         private final RequestSpecBuilder reqSpec;
         private final ResponseSpecBuilder respSpec;
@@ -192,7 +192,7 @@ public class TestPlanApi {
     public static class CreateTestPlanAttachmentsByTestPlanKeyOper implements Oper {
 
         public static final Method REQ_METHOD = POST;
-        public static final String REQ_URI = "/testplan/{testPlanKey}/attachments";
+        public static final String REQ_URI = "/rest/atm/1.0/testplan/{testPlanKey}/attachments";
         public static final String TEST_PLAN_KEY_PATH = "testPlanKey";
         private final RequestSpecBuilder reqSpec;
         private final ResponseSpecBuilder respSpec;
@@ -268,7 +268,7 @@ public class TestPlanApi {
     public static class DeleteTestPlanByTestPlanKeyOper implements Oper {
 
         public static final Method REQ_METHOD = DELETE;
-        public static final String REQ_URI = "/testplan/{testPlanKey}";
+        public static final String REQ_URI = "/rest/atm/1.0/testplan/{testPlanKey}";
         public static final String TEST_PLAN_KEY_PATH = "testPlanKey";
         private final RequestSpecBuilder reqSpec;
         private final ResponseSpecBuilder respSpec;
@@ -335,7 +335,7 @@ public class TestPlanApi {
     public static class FindTestPlanOper implements Oper {
 
         public static final Method REQ_METHOD = GET;
-        public static final String REQ_URI = "/testplan/search";
+        public static final String REQ_URI = "/rest/atm/1.0/testplan/search";
         public static final String FIELDS_QUERY = "fields";
         public static final String QUERY_QUERY = "query";
         public static final String START_AT_QUERY = "startAt";
@@ -441,7 +441,7 @@ public class TestPlanApi {
     public static class GetTestPlanAttachmentsByTestPlanKeyOper implements Oper {
 
         public static final Method REQ_METHOD = GET;
-        public static final String REQ_URI = "/testplan/{testPlanKey}/attachments";
+        public static final String REQ_URI = "/rest/atm/1.0/testplan/{testPlanKey}/attachments";
         public static final String TEST_PLAN_KEY_PATH = "testPlanKey";
         private final RequestSpecBuilder reqSpec;
         private final ResponseSpecBuilder respSpec;
@@ -518,7 +518,7 @@ public class TestPlanApi {
     public static class GetTestPlanByTestPlanKeyOper implements Oper {
 
         public static final Method REQ_METHOD = GET;
-        public static final String REQ_URI = "/testplan/{testPlanKey}";
+        public static final String REQ_URI = "/rest/atm/1.0/testplan/{testPlanKey}";
         public static final String TEST_PLAN_KEY_PATH = "testPlanKey";
         public static final String FIELDS_QUERY = "fields";
         private final RequestSpecBuilder reqSpec;
@@ -604,7 +604,7 @@ public class TestPlanApi {
     public static class UpdateTestPlanByTestPlanKeyOper implements Oper {
 
         public static final Method REQ_METHOD = PUT;
-        public static final String REQ_URI = "/testplan/{testPlanKey}";
+        public static final String REQ_URI = "/rest/atm/1.0/testplan/{testPlanKey}";
         public static final String TEST_PLAN_KEY_PATH = "testPlanKey";
         private final RequestSpecBuilder reqSpec;
         private final ResponseSpecBuilder respSpec;

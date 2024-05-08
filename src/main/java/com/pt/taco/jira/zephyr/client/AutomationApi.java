@@ -92,7 +92,7 @@ public class AutomationApi {
     public static class CreateAutomationExecutionCucumberByProjectKeyOper implements Oper {
 
         public static final Method REQ_METHOD = POST;
-        public static final String REQ_URI = "/automation/execution/cucumber/{projectKey}";
+        public static final String REQ_URI = "/rest/atm/1.0/automation/execution/cucumber/{projectKey}";
         public static final String PROJECT_KEY_PATH = "projectKey";
         private final RequestSpecBuilder reqSpec;
         private final ResponseSpecBuilder respSpec;
@@ -169,7 +169,7 @@ public class AutomationApi {
     public static class CreateAutomationTestCycleByProjectKeyOper implements Oper {
 
         public static final Method REQ_METHOD = POST;
-        public static final String REQ_URI = "/automation/execution/{projectKey}";
+        public static final String REQ_URI = "/rest/atm/1.0/automation/execution/{projectKey}";
         public static final String PROJECT_KEY_PATH = "projectKey";
         private RequestSpecBuilder reqSpec;
         private ResponseSpecBuilder respSpec;
@@ -245,10 +245,10 @@ public class AutomationApi {
     public static class GetCucumberFeatureFilesOper implements Oper {
 
         public static final Method REQ_METHOD = GET;
-        public static final String REQ_URI = "/automation/testcases";
+        public static final String REQ_URI = "/rest/atm/1.0/automation/testcases";
         public static final String TQL_QUERY = "tql";
-        private RequestSpecBuilder reqSpec;
-        private ResponseSpecBuilder respSpec;
+        private final RequestSpecBuilder reqSpec;
+        private final ResponseSpecBuilder respSpec;
 
         public GetCucumberFeatureFilesOper(RequestSpecBuilder reqSpec) {
             this.reqSpec = reqSpec;

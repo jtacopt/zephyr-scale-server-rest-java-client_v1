@@ -81,7 +81,7 @@ public class IssueLinkApi {
     public static class GetIssueLinkByIssueKeyOper implements Oper {
 
         public static final Method REQ_METHOD = GET;
-        public static final String REQ_URI = "/issuelink/{issueKey}/testcases";
+        public static final String REQ_URI = "/rest/atm/1.0/issuelink/{issueKey}/testcases";
         public static final String ISSUE_KEY_PATH = "issueKey";
         public static final String FIELDS_QUERY = "fields";
         private final RequestSpecBuilder reqSpec;

@@ -87,7 +87,7 @@ public class EnvironmentsApi {
     public static class CreateEnvironmentsOper implements Oper {
 
         public static final Method REQ_METHOD = POST;
-        public static final String REQ_URI = "/environments";
+        public static final String REQ_URI = "/rest/atm/1.0/environments";
 
         private final RequestSpecBuilder reqSpec;
         private final ResponseSpecBuilder respSpec;
@@ -164,7 +164,7 @@ public class EnvironmentsApi {
     public static class GetEnvironmentsOper implements Oper {
 
         public static final Method REQ_METHOD = GET;
-        public static final String REQ_URI = "/environments";
+        public static final String REQ_URI = "/rest/atm/1.0/environments";
         public static final String PROJECT_KEY_QUERY = "projectKey";
         private final RequestSpecBuilder reqSpec;
         private final ResponseSpecBuilder respSpec;
