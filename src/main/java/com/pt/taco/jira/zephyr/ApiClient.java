@@ -20,6 +20,7 @@ import com.pt.taco.jira.zephyr.client.DeleteExecutionApi;
 import com.pt.taco.jira.zephyr.client.EnvironmentsApi;
 import com.pt.taco.jira.zephyr.client.FolderApi;
 import com.pt.taco.jira.zephyr.client.IssueLinkApi;
+import com.pt.taco.jira.zephyr.client.MySelfApi;
 import com.pt.taco.jira.zephyr.client.ProjectApi;
 import com.pt.taco.jira.zephyr.client.TestCasesApi;
 import com.pt.taco.jira.zephyr.client.TestPlanApi;
@@ -42,6 +43,10 @@ public class ApiClient {
 
     public static ApiClient api(Config config) {
         return new ApiClient(config);
+    }
+
+    public MySelfApi mySelf() {
+        return MySelfApi.mySelf(config.reqSpecSupplier);
     }
 
     public AttachmentsApi attachments() {

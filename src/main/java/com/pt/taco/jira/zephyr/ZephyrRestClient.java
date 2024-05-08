@@ -1,12 +1,14 @@
 package com.pt.taco.jira.zephyr;
 
 import com.google.gson.reflect.TypeToken;
+import com.pt.taco.jira.zephyr.client.MySelfApi;
 import com.pt.taco.jira.zephyr.client.TestCasesApi;
 import com.pt.taco.jira.zephyr.client.TestResultApi;
 import com.pt.taco.jira.zephyr.client.model.Attachment;
 import com.pt.taco.jira.zephyr.client.model.Step;
 import com.pt.taco.jira.zephyr.client.model.TestCase;
 import com.pt.taco.jira.zephyr.client.model.TestResult;
+import com.pt.taco.jira.zephyr.client.model.User;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.response.Response;
@@ -58,6 +60,19 @@ public class ZephyrRestClient {
     private ApiClient getClient() {
         return ApiClient.api(ApiClient.Config.apiConfig()
                 .reqSpecSupplier(this::getRequestSpecification));
+    }
+
+    /*
+     *
+     */
+
+    public MySelfApi getSelfApi() {
+        return getClient().mySelf();
+    }
+
+    public User getCurrentUser() {
+        Response response = getSelfApi().getCurrentUser().execute(ResponseBody::peek).peek();
+        return response.as(User.class);
     }
 
     /*
