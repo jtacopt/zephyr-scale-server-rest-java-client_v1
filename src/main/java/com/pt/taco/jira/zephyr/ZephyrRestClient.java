@@ -31,7 +31,7 @@ public class ZephyrRestClient {
 
     protected static final Logger LOG = Logger.getLogger(ZephyrRestClient.class.getName());
 
-    private final  String baseUrlString;
+    private final String baseUrlString;
     private final String username;
     private final String apiToken;
 
@@ -43,7 +43,7 @@ public class ZephyrRestClient {
         this(baseUrlString, System.getenv("JIRA_USERNAME"), System.getenv("JIRA_API_TOKEN"));
     }
 
-    private  ZephyrRestClient(final String baseUrlString, final String username, final String apiToken) {
+    private ZephyrRestClient(final String baseUrlString, final String username, final String apiToken) {
         this.baseUrlString = baseUrlString;
         this.username = username;
         this.apiToken = apiToken;

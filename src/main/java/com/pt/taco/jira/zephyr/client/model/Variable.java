@@ -34,7 +34,7 @@ public class Variable {
     public static final String SERIALIZED_NAME_TYPE = "type";
     /**
      * -- GETTER --
-     *  Get name
+     * Get name
      *
      * @return name
      */
@@ -42,7 +42,7 @@ public class Variable {
     private String name;
     /**
      * -- GETTER --
-     *  Get type
+     * Get type
      *
      * @return type
      */

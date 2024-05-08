@@ -50,7 +50,6 @@ Custom fields must have of these types: &#x60;SINGLE_LINE_TEXT&#x60;, &#x60;MULT
 Creates a new custom field option for &#x60;SINGLE_CHOICE_SELECT_LIST&#x60; or &#x60;MULTI_CHOICE_SELECT_LIST&#x60;
 custom field.
 
-
 ### Parameters
 
 | Name              | Type       | Description | Notes      |

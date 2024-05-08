@@ -1,6 +1,5 @@
 # TestCasesApi
 
-
 | Method                                                                                                                               | HTTP request                                                  | Description |
 |--------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------|-------------|
 | [**createTestCase**](TestCasesApi.md#createTestCase)                                                                                 | **POST** /testcase                                            |             |
@@ -159,7 +158,6 @@ null (empty response body)
 
 Retrieve the Test Cases that matches the query passed as parameter.
 
-
 ### Parameters
 
 | Name           | Type        | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | Notes      |
@@ -191,7 +189,6 @@ Retrieve the Test Cases that matches the query passed as parameter.
 
 
 Retrieve the attachments for a test case step
-
 
 ### Parameters
 
@@ -252,7 +249,6 @@ Retrieve the last test result for a given key
 
 Retrieve the Test Case Attachments matching the given key.
 
-
 ### Parameters
 
 | Name            | Type       | Description               | Notes |
@@ -281,7 +277,6 @@ Retrieve the Test Case Attachments matching the given key.
 
 
 Retrieve the Test Case matching the given key.
-
 
 ### Parameters
 
@@ -328,7 +323,6 @@ the field &#x60;&#x60;&#x60;testScript&#x60;&#x60;&#x60;, when it is a step-by-s
 comparison to the target Test Case, it will be deleted. * Steps not having &#x60;&#x60;&#x60;id&#x60;&#x60;&#x60; will
 be considered as a new step and will be created. * Steps having &#x60;&#x60;&#x60;id&#x60;&#x60;&#x60; will be
 considered as existing steps and will be updated.
-
 
 ### Parameters
 

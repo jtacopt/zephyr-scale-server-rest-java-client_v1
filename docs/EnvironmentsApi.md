@@ -17,7 +17,6 @@ All URIs are relative to *https://<JIRA_HOST>/rest/atm/1.0*
 
 Creates a new Environment. The project must exist The project must have Zephyr Scale enabled The name must be unique
 
-
 ### Parameters
 
 | Name     | Type       | Description | Notes      |

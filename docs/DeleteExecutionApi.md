@@ -49,7 +49,6 @@ this process.
 
 Gets the status of the test execution deletion process. The statuses can be: IN_PROGRESS, FINISHED or FAILED.
 
-
 ### Parameters
 
 This endpoint does not need any parameter.
