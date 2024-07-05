@@ -13,8 +13,11 @@
 
 package com.pt.taco.jira.zephyr.client.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.google.gson.annotations.SerializedName;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
@@ -29,6 +32,7 @@ import java.util.Objects;
  */
 @Setter
 @NoArgsConstructor
+@JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class TestCase {
     public static final String SERIALIZED_NAME_KEY = "key";
@@ -38,6 +42,7 @@ public class TestCase {
     public static final String SERIALIZED_NAME_CREATED_BY = "createdBy";
     public static final String SERIALIZED_NAME_NAME = "name";
     public static final String SERIALIZED_NAME_UPDATED_BY = "updatedBy";
+    public static final String SERIALIZED_NAME_KEY_NUMBER = "keyNumber";
     public static final String SERIALIZED_NAME_UPDATED_ON = "updatedOn";
     public static final String SERIALIZED_NAME_OBJECTIVE = "objective";
     public static final String SERIALIZED_NAME_PRECONDITION = "precondition";
@@ -69,6 +74,9 @@ public class TestCase {
     private String name;
     @SerializedName(SERIALIZED_NAME_UPDATED_BY)
     private String updatedBy;
+    @Getter @Setter
+    @SerializedName(SERIALIZED_NAME_KEY_NUMBER)
+    private String keyNumber;
     @SerializedName(SERIALIZED_NAME_UPDATED_ON)
     private String updatedOn;
     @SerializedName(SERIALIZED_NAME_OBJECTIVE)

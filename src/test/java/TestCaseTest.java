@@ -1,6 +1,4 @@
 import com.pt.taco.jira.zephyr.ZephyrRestClient;
-import com.pt.taco.jira.zephyr.client.model.User;
-import io.restassured.response.ResponseBody;
 import org.apache.http.HttpException;
 import org.apache.http.auth.AuthenticationException;
 import org.junit.jupiter.api.AfterEach;
