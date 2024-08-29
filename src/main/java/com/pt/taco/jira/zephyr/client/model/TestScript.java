@@ -15,7 +15,9 @@ package com.pt.taco.jira.zephyr.client.model;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.google.gson.annotations.SerializedName;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,16 +26,23 @@ import java.util.Objects;
 /**
  * TestScript
  */
+@Setter
 @NoArgsConstructor
 @JsonInclude(com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL)
 public class TestScript {
+
     public static final String SERIALIZED_NAME_TYPE = "type";
     public static final String SERIALIZED_NAME_ID = "id";
     public static final String SERIALIZED_NAME_STEPS = "steps";
+    public static final String SERIALIZED_NAME_TEXT = "text";
+
     @SerializedName(SERIALIZED_NAME_TYPE)
     private String type;
     @SerializedName(SERIALIZED_NAME_ID)
     private Integer id;
+    @Getter
+    @SerializedName(SERIALIZED_NAME_TEXT)
+    private String text;
     @SerializedName(SERIALIZED_NAME_STEPS)
     private List<Step> steps;
 
@@ -55,11 +64,6 @@ public class TestScript {
     }
 
 
-    public void setType(String type) {
-        this.type = type;
-    }
-
-
     public TestScript id(Integer id) {
 
         this.id = id;
@@ -75,11 +79,6 @@ public class TestScript {
 
     public Integer getId() {
         return id;
-    }
-
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
 
@@ -108,10 +107,6 @@ public class TestScript {
         return steps;
     }
 
-
-    public void setSteps(List<Step> steps) {
-        this.steps = steps;
-    }
 
     @Override
     public boolean equals(Object o) {
